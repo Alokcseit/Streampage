@@ -1,0 +1,10 @@
+#imagecontainer {
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  object-fit: cover;
+}
+#imga {
+  height: 400px;
+  width: 92%;
+}
