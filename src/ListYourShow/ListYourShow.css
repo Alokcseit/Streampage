@@ -1,0 +1,69 @@
+.showcards {
+  width: 25%;
+  border: 1px solid rgb(224, 217, 217);
+  border-radius: 5px;
+  padding: 10px;
+  height: 220px;
+  text-decoration: none;
+  background-color: #ecf5ff;
+  color: #333333;
+}
+.allcards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.showcards img,
+.showcards2 img {
+  width: 30%;
+  padding-top: 12%;
+  margin-left: 35%;
+}
+.showcards h3,
+.showcards2 h3 {
+  text-align: center;
+  color: #333333;
+}
+#thumb {
+  width: 10%;
+  margin-left: 45%;
+}
+.host {
+  width: 70%;
+  margin: auto;
+  font-family: sans-serif;
+}
+.host h1 {
+  margin-top: 3%;
+  text-align: center;
+  color: #333333;
+  font-size: 50px;
+  font-weight: 600;
+}
+.host p {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+.showcards:hover,
+.showcards2:hover {
+  transform: translate(5px, -10px);
+  transition-duration: 0.5s;
+  box-shadow: 1px 5px 7px #373535;
+  border: none;
+}
+.showcards2 {
+  width: 25%;
+  border: 1px solid rgb(224, 217, 217);
+  border-radius: 5px;
+  padding: 5px;
+  height: 200px;
+  text-decoration: none;
+  background-color: #fcf1f1;
+  color: #333333;
+}

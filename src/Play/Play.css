@@ -1,0 +1,33 @@
+#firstcontainer1111 {
+  display: grid;
+  grid-template-columns: 9% 24% 58% 9%;
+  grid-template-rows: 50px;
+}
+
+#subcontainerone {
+  grid-column: 2/3;
+  background-color: brown;
+}
+#scontainervalue {
+  grid-column: 3/4;
+  display: grid;
+  grid-template-rows: 50px 50px auto;
+}
+#scontainerheading2 {
+  grid-row: 1/2;
+}
+#scontainerbtn {
+  grid-row: 2/3;
+}
+#butt2 {
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+#buttt,
+#butt2:hover {
+  background-color: rgb(237, 13, 13);
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+}

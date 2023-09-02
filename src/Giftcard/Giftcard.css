@@ -1,0 +1,46 @@
+.f-picture p {
+  color: gray;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.f-row {
+  margin: 25px;
+  display: flex;
+}
+.s-row {
+  margin: 25px;
+  display: flex;
+}
+.t-row {
+  margin: 25px;
+  display: flex;
+}
+.fr-row {
+  margin: 25px;
+  display: flex;
+}
+.ft-row {
+  margin: 25px;
+  display: flex;
+}
+.si-row {
+  margin: 25px;
+  display: flex;
+}
+.svn-row {
+  margin: 25px;
+  display: flex;
+}
+.e-row {
+  margin: 25px;
+  display: flex;
+}
+.n-row {
+  margin: 25px;
+  display: flex;
+}
+.tn-row {
+  margin: 25px;
+  display: flex;
+}

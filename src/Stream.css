@@ -9,24 +9,111 @@
   width: 100%;
 }
 #container2 {
-  height: 380px;
+  height: 500px;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 #imagecontainer2 {
-  width: 90%;
+  width: 88%;
   height: 95%;
+  position: relative;
 }
 #imagevaluecontainer {
   width: 100%;
   height: 95%;
   display: flex;
   gap: 15px;
-  overflow: hidden;
+  overflow: auto;
 }
 #imga2 {
-  height: 100%;
+  height: 370px;
   width: 250px;
   border-radius: 3px;
+}
+
+.specialBtn {
+  position: absolute;
+  top: 50%;
+}
+
+.nextBtn {
+  right: 0px;
+}
+
+#imagevaluecontainer::-webkit-scrollbar {
+  height: 0;
+}
+#container3 {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+}
+#subcontainer3 {
+  width: 88%;
+  height: 95%;
+  position: relative;
+}
+#imagevaluecontainer2 {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  overflow: auto;
+}
+#imagevaluecontainer2::-webkit-scrollbar {
+  overflow: hidden;
+}
+.btn {
+  position: absolute;
+  top: 40%;
+  opacity: 0.6;
+  height: 80px;
+  width: 30px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  background-color: rgb(166, 91, 232);
+}
+.next {
+  right: 0;
+}
+#container4 {
+  background-color: #2b3148;
+  height: 550px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+#subcontainer4 {
+  width: 88%;
+}
+#imagevaluecontainer3 {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  overflow: auto;
+}
+#imagevaluecontainer3::-webkit-scrollbar {
+  overflow: hidden;
+}
+.btn2 {
+  position: absolute;
+  top: 55%;
+  opacity: 0.6;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+.next2 {
+  right: 65px;
+}
+#btn1,
+#btn2 {
+  background-color: #2b3148;
+  color: #ffff;
 }

@@ -1,0 +1,77 @@
+.Buzz-main-div {
+  width: 80vw;
+  display: block;
+  margin: 0 auto;
+}
+.Buzz-left-sect {
+  float: left;
+  width: 66%;
+  background-color: azure;
+}
+.Buzz-right-sect {
+  float: right;
+  width: 30%;
+}
+.buzzItem-menu-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.buzzItem-menu-list li {
+  border-radius: 25px;
+  padding: 4px 24px;
+  list-style: none;
+  cursor: pointer;
+  border: 1px solid #cac8c8;
+}
+.buzzItem-menu-list li a {
+  cursor: pointer;
+}
+.buzzItem-menu-list li:first-child {
+  background-color: #eb4e62;
+  color: #fff;
+}
+.sticky-div {
+  position: sticky;
+  top: 31px;
+  left: 0px;
+  height: 800px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  /* margin: 24px 32px 32px 0px; */
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.rgt-hdng-descr {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+.rgt-hdng-descr-hd {
+  font-size: 25px;
+  line-height: 35px;
+}
+.pop_list {
+  float: left;
+  width: 100%;
+  padding-left: 0px;
+}
+.poplist_hd {
+  font-size: 25px;
+}
+.pop_list li {
+  float: left;
+  width: 100%;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+.pop_list li a {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  text-decoration: solid;
+  color: #000;
+}

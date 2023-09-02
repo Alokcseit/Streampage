@@ -1,0 +1,68 @@
+.singaldiv {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.singalImg {
+  width: 100%;
+  cursor: pointer;
+}
+
+.maindivs {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-top: 50px;
+}
+.filtersDiv {
+  width: 30%;
+  display: flex;
+}
+.Activitiesdiv {
+  width: 70%;
+}
+.filter {
+  margin: 20px 20px 30px 0px;
+}
+.activities {
+  margin: 20px 0px 30px 0px;
+}
+.buttonShort {
+  color: #dc354b;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 9px;
+  border: 1px solid gray;
+  background-color: #fff;
+  cursor: pointer;
+}
+.allbtns {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.allImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.Activitiesimages {
+  width: 190px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.ActivitesPara {
+  width: 190px;
+  cursor: pointer;
+  margin-left: 10px;
+}

@@ -1,0 +1,18 @@
+.offers {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+
+  /* justify-content: space-between; */
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 5px rgb(223, 219, 219);
+  /* border: 3px solid gray; */
+}
+.offers img {
+  border-radius: 8px;
+}
+.card p {
+  padding: 5px;
+}

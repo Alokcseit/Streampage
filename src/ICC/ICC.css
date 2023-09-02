@@ -1,0 +1,63 @@
+/* body {
+  background-color: #310076;
+} */
+
+.mainimg-card {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-direction: row;
+  margin: 0px;
+  margin-right: 14%;
+  margin-left: 14%;
+}
+
+.imageCard img {
+  width: 230px;
+}
+
+.main-poster {
+  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px;
+  gap: 40px;
+}
+
+.poster1 img {
+  display: flex;
+  width: 61rem;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.poster2 img {
+  display: flex;
+  width: 61rem;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.heading {
+  margin-left: 11.5%;
+  margin-bottom: -40px;
+  color: #fff;
+}
+
+.heading2 {
+  margin-left: 14.5%;
+  color: #fff;
+  margin-top: 6vh;
+  margin-bottom: 4vh;
+}
+
+.ott-logo img {
+  width: 142vh;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
