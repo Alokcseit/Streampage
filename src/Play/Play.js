@@ -328,10 +328,14 @@ function Play() {
             {contentofplay.map((item) => {
               return (
                 <div id="itemvalue" style={{ height: "450px", width: "200px" }}>
-                  <img style={{ borderRadius: "5px" }} src={item.imgurl}></img>
+                  <img
+                    style={{ borderRadius: "5px" }}
+                    src={item.imgurl}
+                    alt="these are images"
+                  ></img>
                   <h4>{item.name}</h4>
                   <div>{item.theatre}</div>
-                  <div>{item.language}</div>
+                  <div>{item.language.join("/")}</div>
                   <div>₹{item.price}onwords</div>
                 </div>
               );
