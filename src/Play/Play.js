@@ -1,6 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import "./Play.css";
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+  AccordionItem,
+  UncontrolledAccordion,
+} from "reactstrap";
 const play = [
   {
     imgurl:
@@ -263,10 +270,31 @@ const play = [
     theatre: "Shree Ram Center:Delhi",
   },
 ];
+
 function Play() {
   const [contentofplay, setcontentofplay] = useState(play);
   const [activebtn, setactivebtn] = useState([false, false]);
+  const [categoryactivebtn, setcategoryactivebtn] = useState([false, false]);
 
+  //
+  const [open, setOpen] = useState("1");
+  const toggle = (id) => {
+    if (open === id) {
+      setOpen();
+    } else {
+      setOpen(id);
+    }
+  };
+  //
+  function changefiltercontent(event) {
+    const res = categoryactivebtn.map((item, index) => {
+      if (index === event) {
+        return !item;
+      } else {
+        return item;
+      }
+    });
+  }
   function changecontent(event) {
     const result = activebtn.map((item, index) => {
       if (index === event) {
@@ -290,6 +318,495 @@ function Play() {
           <div id="scontainerheading">
             <h2>Filters</h2>
           </div>
+          <UncontrolledAccordion defaultOpen={["1"]} stayOpen>
+            <AccordionItem>
+              <AccordionHeader targetId="1">Date </AccordionHeader>
+              <AccordionBody accordionId="1">
+                <button
+                  style={{
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Today
+                </button>
+                <button
+                  style={{
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Tomorrow
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  This Weekend
+                </button>
+              </AccordionBody>
+            </AccordionItem>
+            <br />
+            <AccordionItem>
+              <AccordionHeader targetId="2">language</AccordionHeader>
+              <AccordionBody accordionId="2">
+                <button
+                  style={{
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Hindi
+                </button>
+                <button
+                  style={{
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  English
+                </button>
+                <button
+                  style={{
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Hindustani
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Urdu
+                </button>
+              </AccordionBody>
+            </AccordionItem>
+            <br />
+            <AccordionItem>
+              <AccordionHeader targetId="3">Categories</AccordionHeader>
+              <AccordionBody accordionId="3">
+                <div>
+                  <button
+                    // id={categoryactivebtn[0] ? "butttn" : "buttn2"}
+                    id="category1"
+                    style={{
+                      marginTop: "15px",
+                      marginRight: "20px",
+                      color: "red",
+                      border: "0.5px solid gray",
+                      borderRadius: "3px",
+                      paddingRight: "10px",
+                      paddingLeft: "10px",
+                      backgroundColor: "rgb(255, 255, 255)",
+                    }}
+                    onClick={() => {
+                      changefiltercontent(0);
+                      // filterFunction("theatre");
+                    }}
+                  >
+                    Theatre
+                  </button>
+                  <button
+                    style={{
+                      marginTop: "15px",
+                      marginRight: "20px",
+                      color: "red",
+                      border: "0.5px solid gray",
+                      borderRadius: "3px",
+                      paddingRight: "10px",
+                      paddingLeft: "10px",
+                      backgroundColor: "rgb(255, 255, 255)",
+                    }}
+                  >
+                    Storytelling
+                  </button>
+                </div>
+              </AccordionBody>
+            </AccordionItem>
+            <br />
+            <AccordionItem>
+              <AccordionHeader targetId="4">Genres</AccordionHeader>
+              <AccordionBody accordionId="4">
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Drama
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Comedy
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Musical
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Adaptation
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Classic
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Thriller
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Biography
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Contemporary
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Fantasy
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Mythological
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Period
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Romantic
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Suspense
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Horror
+                </button>
+              </AccordionBody>
+            </AccordionItem>
+            <br />
+            <AccordionItem>
+              <AccordionHeader targetId="5">More filter</AccordionHeader>
+              <AccordionBody accordionId="5">
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Outdoor Event
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Fast Filling
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Kids Allowed
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Must Attend
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Online Streaming
+                </button>
+              </AccordionBody>
+            </AccordionItem>
+            <br />
+            <AccordionItem>
+              <AccordionHeader targetId="6">Price </AccordionHeader>
+              <AccordionBody accordionId="6">
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Free
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  0-500
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  501-2000
+                </button>
+                <button
+                  style={{
+                    marginTop: "15px",
+                    marginRight: "20px",
+                    color: "red",
+                    border: "0.5px solid gray",
+                    borderRadius: "3px",
+                    paddingRight: "10px",
+                    paddingLeft: "10px",
+                    backgroundColor: "rgb(255, 255, 255)",
+                  }}
+                >
+                  Above 2000
+                </button>
+              </AccordionBody>
+            </AccordionItem>
+          </UncontrolledAccordion>
+          <button id="submbtn"> Browes by Venus</button>
         </div>
         <div id="scontainervalue">
           <div id="scontainerheading2">
